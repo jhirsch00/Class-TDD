@@ -1,0 +1,12 @@
+development: &default
+  adapter: sqlite3
+  database: db/pixtr_development.sqlite3
+  pool: 5
+  timeout: 5000
+  
+test: &test
+  <<: *default
+  database: db/pixtr_test.sqlite3
+  
+cucumber:
+  <<: *test
