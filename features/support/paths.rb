@@ -13,11 +13,21 @@ module NavigationHelpers
 
     # Add more mappings here.
     when /the sign up page/i
-          sign_up_path
-        when /the sign in page/i
-          sign_in_path
-        when /the password reset request page/i
-          new_password_path
+      sign_up_path
+    when /the sign in page/i
+      sign_in_path
+    when /the password reset request page/i
+      new_password_path
+      
+    when /the create gallery page/i
+      new_gallery_path
+      
+    when /the dashboard page/i
+      galleries_path
+      
+    when /the gallery page for "(.*)"/i 
+      gallery_path(Gallery.find_by_title($1))
+      
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
