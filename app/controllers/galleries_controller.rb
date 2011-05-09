@@ -3,11 +3,14 @@ class GalleriesController < ApplicationController
   before_filter :authorize
 
   def index
-    @galleries = Gallery.all
+    @galleries = current_user.galleries
   end
 
   def show
-    @gallery = Gallery.find(params[:id])
+    @gallery = current_user.galleries.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    flash[:notice] = "Gallery not found"
+    redirect_to :action => 'index'
   end
   
   def new
@@ -19,7 +22,7 @@ class GalleriesController < ApplicationController
   end
 
   def create
-    @gallery = Gallery.new(params[:gallery])
+    @gallery = current_user.galleries.build(params[:gallery])
 
     if @gallery.save
       redirect_to(@gallery, :notice => 'Gallery created successfully')
