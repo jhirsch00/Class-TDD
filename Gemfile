@@ -11,6 +11,7 @@ gem 'sass'
 gem 'high_voltage'
 gem 'hoptoad_notifier'
 gem 'flutie'
+gem 'jquery-rails'
 
 # http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test do
