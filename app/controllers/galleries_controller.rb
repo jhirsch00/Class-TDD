@@ -7,6 +7,7 @@ class GalleriesController < ApplicationController
   end
 
   def show
+    # @gallery = Gallery.find(params[:id])
     @gallery = current_user.galleries.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     flash[:notice] = "Gallery not found"

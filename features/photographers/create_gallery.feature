@@ -2,9 +2,11 @@ Feature: Create Gallery
   As a photographer
   I can create galleries
   So that I have a place to put pictures
+  
+  Background:
+    Given I am signed up as "photographer@example.com/password"
 
   Scenario: Create a valid gallery
-    Given I am signed up as "photographer@example.com/password"
     When I sign in as "photographer@example.com/password"
     And I go to the dashboard page
     And I follow "Create Gallery"
@@ -29,4 +31,3 @@ Feature: Create Gallery
     Given I go to the create gallery page
     Then I should see "Sign in"
     And I should be on the sign in page
-
