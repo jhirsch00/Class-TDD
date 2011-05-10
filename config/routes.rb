@@ -1,7 +1,8 @@
 Pixtr::Application.routes.draw do
-  
-  resources :galleries
-  resources :users
+
+  resources :galleries do
+    resources :photos
+  end
 
   root :to => "application#index"
   

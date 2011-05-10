@@ -5,3 +5,8 @@ When /^I create a gallery with title "(.*)"$/ do |title|
   And %{I fill in "Title" with "#{title}"}
   And %{I press "Create Gallery"}
 end
+
+Then /^I should see the image for "([^"]*)"$/ do |photo_name|
+  photo = Photo.find_by_title!(photo_name)
+  page.should have_css("img[src='#{photo.image.url}']")
+end

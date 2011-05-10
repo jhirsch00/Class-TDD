@@ -10,6 +10,10 @@
   <%= @gallery.user_id %>
 </p>
 
+<% @gallery.photos.each do |photo| %>
+  <%= image_tag photo.image.url %>
+<% end %>
 
+<%= link_to 'New Image', new_gallery_photo_path(@gallery) %>
 <%= link_to 'Edit', edit_gallery_path(@gallery) %> |
 <%= link_to 'Back', galleries_path %>
