@@ -4,7 +4,7 @@ describe Gallery do
   
   context "validations" do
   
-    subject { Gallery.new }
+    subject { Factory :gallery }
   
     [:title].each do |attr|
       it "must have a #{ attr }" do
@@ -17,8 +17,7 @@ describe Gallery do
   end
   
   context "associations" do
-    subject { Gallery.new }
-    
+    subject { Factory :gallery }
     it { should belong_to :user }
   end
   

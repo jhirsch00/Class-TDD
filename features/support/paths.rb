@@ -26,7 +26,7 @@ module NavigationHelpers
       galleries_path
       
     when /the gallery page for "(.*)"/i 
-      gallery_path(Gallery.find_by_title($1))
+      gallery_path(Gallery.find_by_title!($1))
       
     # Here is an example that pulls values out of the Regexp:
     #

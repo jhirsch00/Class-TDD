@@ -5,6 +5,7 @@
 # files.
 
 require 'cucumber/rails'
+require 'factory_girl/step_definitions'
 
 if RUBY_VERSION =~ /1.8/
   require 'test/unit/testresult'
