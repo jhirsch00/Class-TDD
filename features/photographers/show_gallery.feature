@@ -11,7 +11,7 @@ Feature: Show Gallery/Galleries
     
   Scenario: View my galleries
     When I sign in as "photographer@example.net/password"
-    And I go to the dashboard
+    And I go to the dashboard page
     Then I should see "my sweet vacation"
     
   Scenario: View only my galleries

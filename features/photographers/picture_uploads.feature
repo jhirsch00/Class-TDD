@@ -17,7 +17,7 @@ Feature: Picture Uploads
     And I press "Upload photo"
     Then I should see "Photo uploaded successfully"
     And I should be on the gallery page for "kittens"
-    And I should see the image for "kitty"
+    And I should see the thumbnails for "kittens"
   
  
  

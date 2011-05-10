@@ -18,7 +18,6 @@ Feature: Create Gallery
     And I should be on the gallery page for "My sweet vacation"
   
   Scenario: Can't create a gallery without a title
-    Given I am signed up as "photographer@example.com/password"
     When I sign in as "photographer@example.com/password"
     And I go to the dashboard page
     And I follow "Create Gallery"

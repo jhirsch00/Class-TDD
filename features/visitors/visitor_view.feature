@@ -11,5 +11,4 @@ Feature: Visitor View Photo
     And I am on the homepage
     When I follow "Galleries"
     And I follow "kittens"
-    And show me the page
     And I should see the thumbnails for "kittens"
