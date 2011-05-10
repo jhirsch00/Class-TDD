@@ -11,7 +11,7 @@
 </p>
 
 <% @gallery.photos.each do |photo| %>
-  <%= image_tag photo.image.url %>
+  <%= image_tag photo.image.url(:thumb) %>
 <% end %>
 
 <%= link_to 'New Image', new_gallery_photo_path(@gallery) %>
